@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rajin Paudel — Product Designer &amp; Frontend Developer</title>
+  <meta name="description" content="Portfolio of Rajin Paudel, a product designer and frontend developer crafting modern web experiences." />
+
+  <!-- Google Fonts: Space Grotesk (display) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- ============ SCROLL PROGRESS BAR ============ -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar" id="navbar">
+    <nav class="nav-container">
+      <a href="#home" class="logo">Rajin<span class="accent-dot"></span></a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <a href="#contact" class="btn btn-primary nav-cta">Let's Talk</a>
+       <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+        <i class="fa-solid fa-sun"></i>
+        <i class="fa-solid fa-moon"></i>
+      </button>
+
+      <!-- Hamburger for mobile -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ============ HERO SECTION ============ -->
+  <section class="hero" id="home">
+    <div class="hero-container fade-in">
+      <div class="hero-text">
+        <p class="hero-eyebrow">👋 Hi, I'm</p>
+        <h1 class="hero-heading">
+          Rajin Paudel <br />
+          <span class="gradient-text" id="typedText"></span><span class="cursor-blink">|</span>
+        </h1>
+        <p class="hero-desc">
+          I design and build thoughtful digital products — clean interfaces,
+          smooth interactions, and code that scales. Currently crafting
+          delightful experiences for startups around the world.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">View Projects <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#contact" class="btn btn-outline">Get In Touch</a>
+        </div>
+
+        <div class="hero-socials">
+          <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" aria-label="Dribbble"><i class="fa-brands fa-dribbble"></i></a>
+        </div>
+      </div>
+
+      <div class="hero-image-wrap">
+        <div class="hero-image-glow"></div>
+        <img
+          src="images/my.png"
+          alt="Illustrated portrait of Rajin Paudel"
+          class="hero-image"
+        />
+        <div class="floating-badge badge-1"><i class="fa-solid fa-code"></i> Clean Code</div>
+        <div class="floating-badge badge-2"><i class="fa-solid fa-wand-magic-sparkles"></i> UI/UX</div>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-hint" aria-label="Scroll down">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ============ ABOUT SECTION ============ -->
+  <section class="about section" id="about">
+    <div class="section-header fade-in">
+      <p class="section-tag">About Me</p>
+      <h2 class="section-title">A little about my story</h2>
+    </div>
+
+      <div class="about-text glass fade-in">
+        <p>
+  I'm a BCS student at NCMT College, specializing in Cybersecurity and Networking.
+  Currently in my fourth semester, I'm passionate about building practical web
+  applications while continuously expanding my knowledge in cybersecurity,
+  networking, and modern software development.
+</p>
+
+<p>
+  My journey began with completing my SEE at Shree North Pole Boarding High School,
+  followed by +2 in Science from Southwestern State College (SWSC). Along the way,
+  I also earned a Python Django certification from Mindrisers Institute of Technology,
+  strengthening my skills in backend development and problem-solving.
+</p>
+
+<p>
+  I enjoy learning new technologies, creating clean and user-friendly websites,
+  and exploring the world of cybersecurity. My goal is to grow into a skilled
+  cybersecurity professional while building impactful digital solutions that
+  combine security, performance, and great user experiences.
+</p>
+      </div>
+    </div>
+  </section>
+  <!-- ============ SKILLS SECTION ============ -->
+  <section class="skills section" id="skills">
+    <div class="section-header fade-in">
+      <p class="section-tag">What I Know</p>
+      <h2 class="section-title">Skills &amp; Tools</h2>
+    </div>
+
+    <div class="skills-grid">
+      <!-- Each skill bar has a data-level attribute read by JS to animate width -->
+      <div class="skill-item glass fade-in">
+        <div class="skill-top">
+          <span>HTML &amp; CSS</span>
+          <span class="skill-percent">85%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-fill" data-level="85"></div>
+        </div>
+      </div>
+
+      <div class="skill-item glass fade-in">
+        <div class="skill-top">
+          <span>JavaScript</span>
+          <span class="skill-percent">50%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-fill" data-level="50"></div>
+        </div>
+      </div>
+
+      <div class="skill-item glass fade-in">
+        <div class="skill-top">
+          <span>UI / UX Design</span>
+          <span class="skill-percent">75%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-fill" data-level="75"></div>
+        </div>
+      </div>
+      <div class="skill-item glass fade-in">
+        <div class="skill-top">
+          <span>Python</span>
+          <span class="skill-percent">85%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-fill" data-level="85"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- ============ PROJECTS SECTION ============ -->
+   <section class="projects section" id="projects">
+    <div class="section-header fade-in">
+      <p class="section-tag">My Work</p>
+      <h2 class="section-title">Featured Projects</h2>
+    </div>
+
+    <div class="projects-grid">
+      <article class="project-card glass fade-in">
+        <div class="project-image">
+          <img src="images/FIFA%20Score.png" alt="FIFA Score website preview" loading="lazy" />
+        </div>
+        <div class="project-info">
+          <h3>FIFA Score</h3>
+          <p>
+            A real-time football score web application that provides live match
+            updates, fixtures, team statistics, and match details through a
+            football API with a clean and responsive interface.
+          </p>
+          <div class="tags">
+            <span>Django</span><span>Python</span><span>HTML/CSS</span><span>API</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card glass fade-in">
+        <div class="project-image">
+          <img src="images/bike.png" alt="BaZar website preview" loading="lazy" />
+        </div>
+        <div class="project-info">
+          <h3>BaZar</h3>
+          <p>
+            A bike information platform that showcases motorcycle models, prices,
+            specifications, and detailed descriptions to help users compare and
+            explore different bikes with ease.
+          </p>
+          <div class="tags">
+            <span>Django</span><span>Bootstrap</span><span>Python</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card glass fade-in">
+        <div class="project-image">
+          <img src="images/portfolio website.png" alt="Personal Portfolio website preview" loading="lazy" />
+        </div>
+        <div class="project-info">
+          <h3>Personal Portfolio</h3>
+          <p>
+            A modern and responsive portfolio website designed to showcase my
+            skills, projects, education, and journey as a BCS student specializing
+            in Cybersecurity and Networking.
+          </p>
+          <div class="tags">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+   <!-- ============ CONTACT SECTION ============ -->
+  <section class="contact section" id="contact">
+    <div class="section-header fade-in">
+      <p class="section-tag">Get In Touch</p>
+      <h2 class="section-title">Let's build something great</h2>
+    </div>
+ 
+    <div class="contact-grid">
+      <div class="contact-info glass fade-in">
+        <h3>Contact Information</h3>
+        <p>Have a project in mind or just want to say hi? My inbox is always open.</p>
+ 
+        <ul class="contact-list">
+          <li><i class="fa-solid fa-envelope"></i> porajin24@ncmt.edu.np</li>
+          <li><i class="fa-solid fa-phone"></i> +977 9828791579</li>
+          <li><i class="fa-solid fa-location-dot"></i> Rasuwa, Nepal</li>
+        </ul>
+ 
+        <div class="hero-socials contact-socials">
+          <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" aria-label="Dribbble"><i class="fa-brands fa-dribbble"></i></a>
+        </div>
+      </div>
+ 
+      <form class="contact-form glass fade-in" id="contactForm">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary form-submit">
+          Send Message <i class="fa-solid fa-paper-plane"></i>
+        </button>
+        <p class="form-status" id="formStatus"></p>
+      </form>
+    </div>
+  </section>
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer-content">
+      <a href="#home" class="logo"><span class="accent-dot">.</span></a>
+      <p>Designing and building thoughtful digital products, one pixel at a time.</p>
+
+      <div class="hero-socials footer-socials">
+        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Rajin Paudel. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ BACK TO TOP BUTTON ============ -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
