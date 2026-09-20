@@ -5,8 +5,8 @@
 #  **Features*
 
 - ***Responsive Navbar***
--***Home, About, Skills, Projects, and Contact Sections***
--***Personal Profile & Introduction***
--***Social Media Icons & Links***
--***Modern, Clean & Responsive Design***
--***Interactive Buttons and Elements***
+- ***Home, About, Skills, Projects, and Contact Sections***
+- ***Personal Profile & Introduction***
+- ***Social Media Icons & Links***
+- ***Modern, Clean & Responsive Design***
+- ***Interactive Buttons and Elements***
