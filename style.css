@@ -1,20 +1,5 @@
-/* =========================================================
-   style.css — organized roughly top to bottom in the same
-   order sections appear on the page. Quick map if you're
-   jumping around:
 
-   Variables & reset  →  Navbar  →  Hero  →  About  →  Skills
-   →  Projects  →  Experience timeline  →  Services  →
-   Testimonials  →  Contact  →  Footer  →  Back-to-top  →
-   fade-in animations  →  responsive breakpoints at the bottom
-========================================================= */
-
-
-/* =========================================================
-   CSS VARIABLES & RESET
-========================================================= */
 :root {
-  /* Colors */
   --bg-color: #0b1120;
   --bg-secondary: #131a2c;
   --text-primary: #ffffff;
@@ -27,36 +12,27 @@
   --gradient-primary: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
   --gradient-glow: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(34, 197, 94, 0.15));
 
-  /* Glassmorphism */
   --glass-bg: rgba(255, 255, 255, 0.04);
   --glass-border: rgba(255, 255, 255, 0.08);
   --glass-blur: blur(16px);
 
-  /* Radius */
   --radius-sm: 10px;
   --radius-md: 16px;
   --radius-lg: 24px;
   --radius-full: 999px;
-
-  /* Spacing */
+   
   --section-padding: 120px 8%;
 
-  /* Fonts */
+
   --font-display: "Space Grotesk", sans-serif;
   --font-body: "Inter", sans-serif;
 
-  /* Transitions */
+
   --transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 
 
-
-
-
-
-
-/* Light mode overrides — applied when <body> has data-theme="light" */
 body[data-theme="light"] {
   --bg-color: #ffffff;
   --bg-secondary: #f4f6fb;
@@ -78,7 +54,6 @@ body[data-theme="light"] .btn-primary {
   color: #ffffff;
 }
 
-/* Theme toggle button */
 .theme-toggle {
   width: 42px;
   height: 42px;
@@ -125,7 +100,7 @@ body[data-theme="light"] .theme-toggle .fa-moon {
 }
 
 html {
-  scroll-behavior: smooth; /* Native smooth scrolling for anchor links */
+  scroll-behavior: smooth; 
 }
 
 body {
@@ -164,9 +139,6 @@ button {
 }
 
 
-/* =========================================================
-   GLOBAL / UTILITY CLASSES
-========================================================= */
 .section {
   padding: var(--section-padding);
   position: relative;
@@ -199,7 +171,6 @@ button {
   color: transparent;
 }
 
-/* Reusable glassmorphism card style */
 .glass {
   background: var(--glass-bg);
   border: 1px solid var(--glass-border);
@@ -215,7 +186,6 @@ button {
   transform: translateY(-4px);
 }
 
-/* Buttons */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -251,7 +221,6 @@ button {
   transform: translateY(-2px);
 }
 
-/* Fade-in on scroll: starts hidden, JS toggles .visible via IntersectionObserver */
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
@@ -263,24 +232,17 @@ button {
   transform: translateY(0);
 }
 
-
-/* =========================================================
-   SCROLL PROGRESS BAR
-========================================================= */
 .scroll-progress {
   position: fixed;
   top: 0;
   left: 0;
   height: 3px;
-  width: 0%; /* JS updates this on scroll */
+  width: 0%; 
   background: var(--gradient-primary);
   z-index: 9999;
   box-shadow: 0 0 10px rgba(59, 130, 246, 0.7);
 }
 
-/* =========================================================
-   NAVBAR
-========================================================= */
 .navbar {
   position: fixed;
   top: 0;
@@ -292,7 +254,6 @@ button {
   background: #000000;
 }
 
-/* Slightly tighter padding once user scrolls, background stays solid black */
 .navbar.scrolled {
   padding: 14px 8%;
   background: #000000;
@@ -370,7 +331,6 @@ button {
   transition: var(--transition);
 }
 
-/* Hamburger animates into an X when menu is open (toggled via JS) */
 .hamburger.active span:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
 }
@@ -381,10 +341,6 @@ button {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-
-/* =========================================================
-   HERO SECTION
-========================================================= */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -556,10 +512,6 @@ button {
   100% { top: 22px; opacity: 0; }
 }
 
-
-/* =========================================================
-   ABOUT SECTION
-========================================================= */
 .about-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -603,9 +555,6 @@ button {
 }
 
 
-/* =========================================================
-   SKILLS SECTION
-========================================================= */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -639,7 +588,7 @@ button {
 
 .skill-fill {
   height: 100%;
-  width: 0%; /* JS animates this to data-level value when scrolled into view */
+  width: 0%; 
   border-radius: var(--radius-full);
   background: var(--gradient-primary);
   transition: width 1.4s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -647,9 +596,6 @@ button {
 }
 
 
-/* =========================================================
-   PROJECTS SECTION
-========================================================= */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -743,10 +689,6 @@ button {
   border: 1px solid rgba(59, 130, 246, 0.25);
 }
 
-
-/* =========================================================
-   EXPERIENCE TIMELINE
-========================================================= */
 .timeline {
   position: relative;
   max-width: 800px;
@@ -754,7 +696,6 @@ button {
   padding-left: 40px;
 }
 
-/* Vertical line running through the timeline */
 .timeline::before {
   content: "";
   position: absolute;
@@ -810,10 +751,6 @@ button {
   font-size: 0.92rem;
 }
 
-
-/* =========================================================
-   SERVICES SECTION
-========================================================= */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -851,9 +788,6 @@ button {
 }
 
 
-/* =========================================================
-   TESTIMONIALS SECTION
-========================================================= */
 .testimonials-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -902,10 +836,6 @@ button {
   color: var(--text-muted);
 }
 
-
-/* =========================================================
-   CONTACT SECTION
-========================================================= */
 .contact-grid {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
@@ -1003,9 +933,6 @@ button {
 }
 
 
-/* =========================================================
-   FOOTER
-========================================================= */
 .footer {
   padding: 70px 8% 30px;
   border-top: 1px solid var(--glass-border);
@@ -1039,9 +966,6 @@ button {
 }
 
 
-/* =========================================================
-   BACK TO TOP BUTTON
-========================================================= */
 .back-to-top {
   position: fixed;
   bottom: 30px;
@@ -1063,7 +987,6 @@ button {
   z-index: 999;
 }
 
-/* Shown once user scrolls down (toggled via JS) */
 .back-to-top.show {
   opacity: 1;
   visibility: visible;
@@ -1076,9 +999,7 @@ button {
 }
 
 
-/* =========================================================
-   MEDIA QUERIES (RESPONSIVE)
-========================================================= */
+
 @media (max-width: 1024px) {
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1103,7 +1024,7 @@ button {
     display: flex;
   }
 
-  /* Mobile dropdown menu */
+
   .nav-links.active {
     display: flex;
     flex-direction: column;
